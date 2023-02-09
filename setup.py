@@ -48,12 +48,6 @@ setup.add_instance(TypeSanBaseline())
 
 ''' Targets '''
 patches = ['asan', 'dealII-stddef', 'omnetpp-invalid-ptrcheck', 'gcc-init-ptr', 'libcxx']
-setup.add_target(infra.targets.SPEC2006(
-    # see the following link for more options for source[_type] below:
-    # http://instrumentation-infra.readthedocs.io/en/master/targets.html#infra.targets.SPEC2006
-    source='spec-mount-dir', # SET THIS FOR SPEC
-    source_type='mounted',   # SET THIS FOR SPEC
-    patches=patches
-))
+setup.add_target(infra.target.Juliet())
 
 setup.main()
