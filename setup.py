@@ -48,6 +48,6 @@ setup.add_instance(TypeSanBaseline())
 
 ''' Targets '''
 patches = ['asan', 'dealII-stddef', 'omnetpp-invalid-ptrcheck', 'gcc-init-ptr', 'libcxx']
-setup.add_target(infra.target.Juliet())
+setup.add_target(infra.targets.Juliet())
 
 setup.main()
