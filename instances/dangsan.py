@@ -35,7 +35,7 @@ class DangSanSource(infra.Package):
         git_fetch(ctx, 'https://github.com/vusec/dangsan.git', self.commit)
 
         os.chdir('src')
-        git_fetch(ctx, 'git@github.com:llvm/llvm-project.git',
+        git_fetch(ctx, 'https://github.com/llvm/llvm-project.git',
                   '43dff0c03324', 'llvm-project')
 
         # Apply LLVM patches
