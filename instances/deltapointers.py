@@ -32,7 +32,7 @@ class DeltaPointersSource(infra.Package):
     overflow_bit = True
     runtime_stats = False
     llvm_patches = ['gold-plugins', 'statsfilter', 'ValueMap-buildfix']
-    llvm = LLVM('3.8.0', compiler_rt=False, patches=llvm_patches)
+    llvm = LLVM('3.8.0', compiler_rt=False, patches=llvm_patches, build_flags="-DCMAKE_CXX_FLAGS='-w'")
     llvm.binutils = BinUtils('2.30')
 
     def __init__(self, commit='master', debug=False) -> None:
