@@ -31,7 +31,7 @@ class DeltaPointersSource(infra.Package):
     addrspace_bits = 32
     overflow_bit = True
     runtime_stats = False
-    llvm_patches = ['gold-plugins', 'statsfilter']
+    llvm_patches = ['gold-plugins', 'statsfilter', 'ValueMap-buildfix']
     llvm = LLVM('3.8.0', compiler_rt=False, patches=llvm_patches)
     llvm.binutils = BinUtils('2.30')
 
