@@ -1,4 +1,4 @@
 [submodule "infra"]
 	path = infra
-	url = https://github.com/vusec/instrumentation-infra
+	url = https://github.com/Teemperor/instrumentation-infra
 	branch = master
